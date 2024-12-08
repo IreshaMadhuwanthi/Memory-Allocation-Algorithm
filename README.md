@@ -44,7 +44,7 @@ This is a Python-based application demonstrating memory allocation using the Qui
 1. Clone the repository or download the source code:
    ```bash
     git clone https://github.com/IreshaMadhuwanthi/Memory-Allocation-Algorithm.git
-    cd quick-fit-simulator
+    cd Memory-Allocation-Algorithm
 2. Install the required dependencies:
     ```bash
     pip install pyqt5
