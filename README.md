@@ -22,7 +22,7 @@ This is a Python-based application demonstrating memory allocation using the Qui
 
 - Memory block categories are pre-defined; dynamic resizing is not supported.
 - Designed for educational purposes; not suitable for production use.
-- <h3>Limitations</h3>
+  
 
 
 <h3>How It Works</h3>
