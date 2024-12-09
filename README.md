@@ -2,7 +2,7 @@
 
 <h2>1. Quick Fit Memory Algorithm</h2>
 
-This is a Python-based application demonstrating memory allocation using the Quick Fit algorithm. This application works as a memory allocation simulator. It shows how the Quick Fit algorithm process works. It provides a graphical user interface (GUI) for users to allocate memory blocks, display free memory lists, and manage leftover memory efficiently.
+This is a Python-based application demonstrating memory allocation using the Quick Fit algorithm. This application works as a memory allocation simulator. It shows how the Quick Fit algorithm process works. It provides a graphical user interface (GUI) for users to allocate and deallocate memory blocks, display free memory lists, and manage leftover memory efficiently.
 
 <h3>Features</h3>
 
@@ -10,7 +10,7 @@ This is a Python-based application demonstrating memory allocation using the Qui
 - **Quick Fit Algorithm**: Implements a memory allocation strategy that minimizes fragmentation.
 - **Dynamic Free Lists**: Displays and updates memory blocks in real-time.
 - **Error Handling**: Validates user input and handles edge cases gracefully.
-- Each memory block is considered indivisible for a single process.
+- **Deallocation Process**: Users can deallocate memory blocks and return them to the free list.
   
 <h3>Assumptions</h3> 
 
@@ -32,7 +32,8 @@ This is a Python-based application demonstrating memory allocation using the Qui
 2. Users can allocate memory by entering a process size in KB.
 3. The program uses the best-fit strategy to allocate the most appropriate memory block.
 4. Leftover memory is added as a new block category if applicable.
-5. Users can view the updated memory list after each allocation.
+5. Users can deallocate memory, which is returned to the corresponding free list.
+6. Users can view the updated memory list after each allocation and deallocation.
 
 <h3>Requirements</h3>
 
@@ -56,7 +57,7 @@ This is a Python-based application demonstrating memory allocation using the Qui
 3. Click "Allocate" to allocate memory for the process.
 4. Click "Show Lists" to view the current free memory blocks.
 
-Example
+    Example
    - Initial Free Memory Blocks:
        - 50KB List: 10 Blocks
        - 100KB List: 10 Blocks
@@ -73,7 +74,17 @@ Example
        - 100KB List: 9 Blocks
        - 200KB List: 10 Blocks
        - 500KB List: 10 Blocks
+         
+  5. Click "Deallocate" to free memory previously allocated to a process.
      
+      Example:
+       - After allocating 80KB:
+          - Allocated from 100KB list. 9 out of 10 blocks left.
+          - Created a new block list for 20KB leftover.
+       - After deallocating 80KB:
+         - Returned to the 100KB list. 10 out of 10 blocks are now available.
+         - 20KB leftover remains in its free list.
+
 <h3>Future Enhancements</h3>
 
 - Add functionality to deallocate memory and return it to the free list.
