@@ -204,7 +204,7 @@ class MemoryAllocationApp(QMainWindow):
                 memory_blocks[process_size] = memory_blocks.get(process_size, 0) + 1
                 deallocation_details = f"---------------------------\n\nDeallocated {process_size}KB and returned it to the free list.\n"
             else:
-                deallocation_details = "---------------------------\n\nNo allocated memory to deallocate. All memory is free.\n"
+                deallocation_details = f"---------------------------\n\nNo allocated memory as {process_size} KB to deallocate \n"
 
             self.show_free_lists()
             self.output_box.append(deallocation_details)
